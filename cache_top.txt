@@ -1,0 +1,26 @@
+`include "cache_controller.v"
+module cache_top(
+    input clk,
+    input rst,
+    input cpu_rd,
+    input cpu_wr,
+    input [7:0] addr,
+    input [31:0] wdata,
+    output [31:0] rdata,
+    output hit,
+    output ready
+);
+
+cache_controller DUT(
+    .clk(clk),
+    .rst(rst),
+    .cpu_rd(cpu_rd),
+    .cpu_wr(cpu_wr),
+    .addr(addr),
+    .cpu_wdata(wdata),
+    .cpu_rdata(rdata),
+    .hit(hit),
+    .ready(ready)
+);
+
+endmodule

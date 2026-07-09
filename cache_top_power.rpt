@@ -1,0 +1,60 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : cache_top
+Version: V-2023.12
+Date   : Mon Jun 15 04:23:49 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_tt0p78vn40c (File: /home/ece/Downloads/C-DAC_july24/ref/lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db)
+
+
+Operating Conditions: tt0p78vn40c   Library: saed32rvt_tt0p78vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+cache_top              140000            saed32rvt_tt0p78vn40c
+cache_controller       140000            saed32rvt_tt0p78vn40c
+
+
+Global Operating Voltage = 0.78 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   1.6914 mW   (82%)
+  Net Switching Power  = 360.3001 uW   (18%)
+                         ---------
+Total Dynamic Power    =   2.0517 mW  (100%)
+
+Cell Leakage Power     = 209.8828 uW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential     1.5067e+03        8.2144e-02        1.5846e+08        1.6653e+03  (  73.63%)
+combinational    184.6943          360.2152        5.1424e+07          596.2919  (  26.37%)
+--------------------------------------------------------------------------------------------------
+Total          1.6914e+03 uW       360.2973 uW     2.0988e+08 pW     2.2615e+03 uW
+1
